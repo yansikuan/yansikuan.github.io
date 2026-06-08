@@ -39,9 +39,9 @@ students:
     topic: Agentic RL + Memory
     position: Incoming PhD candidate
 students_note: >
-  I always do my best to help the master students I work with land the strongest
-  possible next position. Feel free to reach out to any of them to hear about their
-  experience.
+  I’m grateful for the chance to work with these talented students, and I
+  always do my best to help them land the strongest possible next position. Feel free
+  to reach out to any of them to hear about their experience.
 ---
 
 Hi, there! I am a Ph.D. Candidate in Artificial Intelligence at [LMU Munich](https://www.lmu.de/en/), advised by Prof. Volker Tresp. My research focuses on **agent memory, agentic RL, multi-agent systems, agent harnessing, and multimodal agents**.

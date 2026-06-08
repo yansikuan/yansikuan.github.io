@@ -3,6 +3,6 @@
 # for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
 # cv_pdf: /assets/pdf/cv_sikuanyan.pdf # CV PDF hidden (uncomment to show the CV download icon)
 email: yan@dbs.ifi.lmu.de # your email address
-rss_icon: true # comment this line to hide the RSS icon
+# rss_icon: true # RSS icon hidden (uncomment to show it)
 scholar_userid: https://scholar.google.com/citations?user=2DRWdnIAAAAJ&hl=en # your Google Scholar ID
 linkedin_username: www.linkedin.com/in/sikuan-yan # your LinkedIn username
