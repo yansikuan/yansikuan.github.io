@@ -1,0 +1,106 @@
+cv:
+  name: Sikuan Yan
+  label: Ph.D. Candidate in Artificial Intelligence
+  email: yan@dbs.ifi.lmu.de
+  location: Munich, Germany
+  image: ""
+  summary: Ph.D. Candidate in Artificial Intelligence at LMU Munich. Research on multi-agent systems, agent memory, agent harnessing, and multimodal agents.
+
+  social_networks:
+    - network: LinkedIn
+      username: # TODO: your LinkedIn username
+
+  sections:
+    Education:
+      - institution: '<a href="https://www.lmu.de/en/">LMU Munich</a>'
+        location: Munich, Germany
+        area: Artificial Intelligence
+        studyType: Ph.D. Candidate
+        start_date: 2025-04
+        end_date: present
+        highlights:
+          - Research with Prof. Volker Tresp on multi-agent systems, agent memory, agent harnessing, and multimodal agents.
+
+      - institution: '<a href="https://www.lmu.de/en/">LMU Munich</a>'
+        location: Munich, Germany
+        area: Informatics
+        studyType: M.Sc.
+        start_date: 2022-10
+        end_date: 2025-02
+        score: "1.3 / 1.0 (Excellent)"
+
+      - institution: '<a href="https://www.tum.de/en/">TUM Munich</a>'
+        location: Munich, Germany
+        area: Informatics
+        studyType: B.Sc.
+        start_date: 2018-10
+        end_date: 2022-08
+
+      - institution: '<a href="https://www.schule-schloss-salem.de/en/">Schule Schloss Salem</a>'
+        location: Salem, Germany
+        area: International Baccalaureate
+        studyType: IB Diploma
+        start_date: 2014-09
+        end_date: 2017-07
+
+    Experience:
+      - company: Munich Center for Machine Learning (MCML)
+        position: Researcher
+        location: Munich, Germany
+        start_date: 2025-09
+        end_date: present
+        highlights:
+          - MCML is one of six national AI Competence Centers, funded on a permanent basis by the German and Bavarian governments' AI strategy, bringing together leading ML researchers from LMU, TUM and associated institutions.
+
+      - company: Huawei 2012 Labs
+        position: Researcher
+        location: Munich, Germany
+        start_date: 2025-05
+        end_date: present
+        highlights:
+          - Based at the Heisenberg Research Institute; research at the intersection of 6G and AI, exploring how large language models and multimodal reasoning can drive next-generation wireless systems.
+
+      - company: Amazon
+        position: Program Management Working Student
+        location: Munich, Germany
+        start_date: 2023-10
+        end_date: 2024-02
+        highlights:
+          - Conducted vendor analysis for the Amazon Austria marketplace, established a champions program, and analyzed Black Friday data to generate actionable insights.
+
+      - company: Siemens AG
+        position: AI Product Management Working Student
+        location: Munich, Germany
+        start_date: 2022-08
+        end_date: 2023-06
+        highlights:
+          - Managed the product lifecycle of an AI-driven procurement analysis web application, digitalizing procurement processes for around 90 Siemens factories worldwide.
+
+      - company: Eatwhats (eatwhats.de)
+        position: Founder
+        location: Munich, Germany
+        start_date: 2020-03
+        end_date: 2021-12
+        highlights:
+          - Built a Dianping-style discovery app for Asian restaurants in Germany, filling a long-standing gap for the local Chinese community.
+          - Within six months, partnered with ~50% of Chinese restaurants in Munich and reached ~1/5 of the city's Chinese population.
+
+    Leadership:
+      - bullet: "**Honored President & Advisor**, CSSA Munich e.V. (2024–present) — advisor to the current president."
+      - bullet: "**President**, CSSA Munich e.V. (2020–2024) — grew the association from 70 to 170 members and scaled annual events from 20 to 50 within two years (cross-platform followers grew by ~300%); produced the largest Chinese New Year Gala in Germany (800+ attendees); hosted annual recruiting talks for dozens of international companies and universities."
+
+    Skills:
+      - name: Languages
+        keywords:
+          - Mandarin (Native)
+          - English (Professional — IB English A)
+          - German (Professional — Goethe C1)
+      - name: Programming
+        keywords:
+          - Python
+          - PyTorch
+          - PyTorch Lightning
+          - Colossal-AI
+          - Blender
+          - Java
+          - React

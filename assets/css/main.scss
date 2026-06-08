@@ -1,0 +1,53 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+/* Built-in Sass modules you’ll likely use across partials */
+@use "sass:math";
+@use "sass:string";
+
+/* Configure your design tokens BEFORE loading any of your partials. */
+@use "variables" with (
+  $max-content-width: {{ site.max_width | default:  "930px" }}
+);
+
+/* Theme partials (resolved from the al-folio gem's _sass load path) */
+@use "themes";
+@use "layout";
+
+// Core styles organized by usage
+@use "typography";
+@use "navbar";
+@use "footer";
+@use "blog";
+@use "publications";
+@use "components";
+@use "utilities";
+
+// Other specialized styles
+@use "tabs";
+@use "teachings";
+@use "typograms";
+
+/* ----------------------------------------------------------------------------
+   Custom overrides (Sikuan Yan)
+   ------------------------------------------------------------------------- */
+
+/* Highlight the author's own name (full first + last) in bold accent color
+   instead of the default underline-only style. */
+.author em,
+.author > em {
+  font-weight: 700 !important;
+  font-style: normal !important;
+  border-bottom: 0 !important;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* CV: remove the stray default list bullet next to each Education / Experience
+   date badge (bootstrap-compat is off, so list-group bullets aren't reset).
+   Only targets dated entries — Leadership bullets and highlight sub-lists stay. */
+.cv .list-group-item:has(.date-column) {
+  list-style: none;
+}

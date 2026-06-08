@@ -1,0 +1,6 @@
+# Map co-author last names to first-name variants and an optional URL.
+# al-folio uses this to auto-link co-authors on the publications page.
+# Add entries as you like, e.g.:
+# "tresp":
+#   - firstname: ["Volker"]
+#     url: https://www.dbs.ifi.lmu.de/~tresp/
