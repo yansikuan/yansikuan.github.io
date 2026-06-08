@@ -1,16 +1,14 @@
 ---
 ---
 
-@inproceedings{yan2026memoryr1,
-  abbr      = {ACL 2026 Main},
-  bibtex_show = {true},
-  title     = {Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning},
-  author    = {Yan, Sikuan and Yang, Xiufeng and Huang, Zuchao and Nie, Ercong and Ding, Zifeng and Li, Zonggen and Ma, Xiaowen and Bi, Jinhe and Kersting, Kristian and Pan, Jeff Z. and Sch{\"u}tze, Hinrich and Tresp, Volker and Ma, Yunpu},
-  booktitle = {Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (ACL), Main Conference},
+@article{yan2026pyravid,
+  title     = {PyraVid: Hierarchical Multimodal Memory for Long-Horizon Video Reasoning},
+  author    = {Yan, Sikuan and Dong, Sicheng and Wang, Haotong and Nie, Ercong and Liu, Yilun and Bi, Jinhe and Xu, Yingjie and Schwarzmann, Susanna and Trivisonno, Riccardo and Tresp, Volker and Ma, Yunpu},
+  journal   = {Under review},
+  pdf       = {https://arxiv.org/pdf/2605.17065},
   year      = {2026},
-  pdf       = {https://arxiv.org/pdf/2508.19828},
   selected  = {true},
-  abstract  = {Large Language Models (LLMs) have demonstrated impressive capabilities across a wide range of NLP tasks, but they remain fundamentally stateless, constrained by limited context windows that hinder long-horizon reasoning. Recent efforts to address this limitation often augment LLMs with an external memory bank, yet most existing pipelines are static and heuristic-driven, lacking a learned mechanism for deciding what to store, update, or retrieve. We present Memory-R1, a reinforcement learning (RL) framework that equips LLMs with the ability to actively manage and utilize external memory through two specialized agents: a Memory Manager that learns structured operations, including ADD, UPDATE, DELETE, and NOOP; and an Answer Agent that pre-selects and reasons over relevant entries. Both agents are fine-tuned with outcome-driven RL (PPO and GRPO), enabling adaptive memory management with minimal supervision. With only 152 training QA pairs, Memory-R1 outperforms strong baselines and generalizes across diverse question types, three benchmarks (LoCoMo, MSC, LongMemEval), and multiple model scales (3B-14B). }
+  abstract  = {Memory has become an increasingly important component of agentic systems, as these systems are expected to reason over long-term experience. However, prior work has largely focused on unimodal memory, leaving multimodal memory relatively underexplored despite its central role in real-world applications. Compared with unimodal settings, multimodal memory introduces additional challenges, including heterogeneous input integration, person-centric information alignment, and evidence aggregation across different granularities. We present PyraVid, a hierarchical multimodal memory framework inspired by Event Segmentation Theory from cognitive science. PyraVid organizes long videos into a coarse-to-fine pyramid structure, enabling structured memory access and effective evidence aggregation. It further supports structure-guided memory expansion with pruning, allowing the retrieval of related events with strong causal connectivity but low semantic similarity while reducing noise. Experiments on multiple long-video understanding benchmarks show that PyraVid consistently improves performance across datasets, model scales, and question types, highlighting the effectiveness of hierarchical multimodal memory for long-horizon reasoning. }
 }
 
 @article{yan2026memoryr2,
@@ -24,16 +22,6 @@
   abstract  = {Memory-augmented LLM agents enable interactions that extend beyond finite context windows by storing, updating, and reusing information across sessions. However, training such agents with reinforcement learning in multi-session environments is challenging because memory turns the agent's past actions into part of its future environment. Once different rollouts write, update, or delete different memories, they no longer share the same intermediate memory state, making trajectory-level comparisons fundamentally unfair. This violates a key assumption behind group-relative methods such as GRPO, where rollouts are compared as if they were sampled from the same effective environment. Consequently, trajectory-level rewards provide noisy or biased credit signals for long-horizon memory operations. To address this challenge, we introduce Memory-R2, a training framework for long-horizon memory-augmented LLM agents. Its core algorithm, LoGo-GRPO, combines local and global group-relative optimization. The global objective preserves end-to-end learning from long-horizon trajectory-level rewards, while local rerollouts compare different memory-operation outcomes from the same intermediate memory state, yielding fairer group comparisons and more precise supervision for memory construction. Beyond credit assignment, Memory-R2 jointly optimizes memory formation and memory evolution with a shared-parameter co-learning design, where a fact extractor and a memory manager are instantiated from the same LLM backbone through role-specific prompts. To stabilize multi-step RL over long memory horizons, we adopt a progressive curriculum that increases the training horizon from 8 to 16 to 32 sessions. Together, these components provide an effective training paradigm for memory-augmented LLM agents in long-horizon multi-session settings. }
 }
 
-@article{yan2026pyravid,
-  title     = {PyraVid: Hierarchical Multimodal Memory for Long-Horizon Video Reasoning},
-  author    = {Yan, Sikuan and Dong, Sicheng and Wang, Haotong and Nie, Ercong and Liu, Yilun and Bi, Jinhe and Xu, Yingjie and Schwarzmann, Susanna and Trivisonno, Riccardo and Tresp, Volker and Ma, Yunpu},
-  journal   = {Under review},
-  pdf       = {https://arxiv.org/pdf/2605.17065},
-  year      = {2026},
-  selected  = {true},
-  abstract  = {Memory has become an increasingly important component of agentic systems, as these systems are expected to reason over long-term experience. However, prior work has largely focused on unimodal memory, leaving multimodal memory relatively underexplored despite its central role in real-world applications. Compared with unimodal settings, multimodal memory introduces additional challenges, including heterogeneous input integration, person-centric information alignment, and evidence aggregation across different granularities. We present PyraVid, a hierarchical multimodal memory framework inspired by Event Segmentation Theory from cognitive science. PyraVid organizes long videos into a coarse-to-fine pyramid structure, enabling structured memory access and effective evidence aggregation. It further supports structure-guided memory expansion with pruning, allowing the retrieval of related events with strong causal connectivity but low semantic similarity while reducing noise. Experiments on multiple long-video understanding benchmarks show that PyraVid consistently improves performance across datasets, model scales, and question types, highlighting the effectiveness of hierarchical multimodal memory for long-horizon reasoning. }
-}
-
 @inproceedings{bi2026echorl,
   abbr      = {ICML 2026},
   bibtex_show = {true},
@@ -44,18 +32,6 @@
   year      = {2026},
   selected  = {true},
   abstract  = {Reinforcement Learning with Verifiable Rewards is an effective route for post-training to strengthen the reasoning capability of large language models. However, as training proceeds, the learning signal can collapse thus makes the training gain become marginal and ineffective. Specifically, a growing fraction of prompts' rollouts become advantage-degenerated: all the self-generated rollouts show verified-success, making the standard deviation over their rewards be zero; accordingly each rollout's advantage becomes degenerated (zero) as well. Given such rollouts' advantages, the policy-gradient for model optimization eventually vanishes, capping the training performance. We argue that some of these rollouts still contain valuable learning signals but unfortunately omitted with the existing RLVR methods. In this paper, inspired through analyzing the entropy pattern behind golden trajectories produced by external expert models, we propose EchoRL for better exploiting the advantage-degenerated rollouts to further improve the training performance. EchoRL is a lightweight module that first identifies an EchoClip from verified-success rollouts based on their step-level entropy values, and then feeds this clip back as an auxiliary supervision signal in the RL objective. Extensive experiments across 10 benchmarks, 5 LLM backbones, and 4 popular RLVR post-training methods demonstrate that EchoRL consistently improves RLVR post-training with minimal overhead. }
-}
-
-@inproceedings{ma2026selfevolving,
-  abbr      = {ACL 2026 Findings},
-  bibtex_show = {true},
-  title     = {Self-Evolving Multi-Agent Systems via Textual Backpropagation},
-  author    = {Ma, Xiaowen and Ma, Yunpu and Lin, Chenyang and Yan, Sikuan and Bi, Jinhe and Cao, Zixuan and Tian, Yijun and Tresp, Volker and Sch{\"u}tze, Hinrich},
-  booktitle = {Findings of the Association for Computational Linguistics (ACL Findings)},
-  pdf       = {https://arxiv.org/pdf/2506.09046},
-  year      = {2026},
-  selected  = {true},
-  abstract  = {Leveraging multiple Large Language Models(LLMs) has proven effective for addressing complex, high-dimensional tasks, but current approaches often rely on static, manually engineered multi-agent configurations. To overcome these constraints, we present the Agentic Neural Network(ANN), a framework that conceptualizes multi-agent collaboration as a layered neural network architecture. In this design, each agent operates as a node, and each layer forms a cooperative "team" focused on a specific subtask. Agentic Neural Network follows a two-phase optimization strategy: (1) Forward Phase-Drawing inspiration from neural network forward passes, tasks are dynamically decomposed into subtasks, and cooperative agent teams with suitable aggregation methods are constructed layer by layer. (2) Backward Phase-Mirroring backpropagation, we refine both global and local collaboration through iterative feedback, allowing agents to self-evolve their roles, prompts, and coordination. This neuro-symbolic approach enables ANN to create new or specialized agent teams post-training, delivering notable gains in accuracy and adaptability. Across four benchmark datasets, ANN surpasses leading multi-agent baselines under the same configurations, showing consistent performance improvements. Our findings indicate that ANN provides a scalable, data-driven framework for multi-agent systems, combining the collaborative capabilities of LLMs with the efficiency and flexibility of neural network principles. We plan to open-source the entire framework.}
 }
 
 @article{yang2026reasoningcompression,
@@ -71,6 +47,30 @@
   author    = {Liu, Yilun and Han, Jinru and Yan, Sikuan and Tresp, Volker and Ma, Yunpu},
   journal   = {Under review},
   year      = {2026}
+}
+
+@inproceedings{yan2026memoryr1,
+  abbr      = {ACL 2026 Main},
+  bibtex_show = {true},
+  title     = {Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning},
+  author    = {Yan, Sikuan and Yang, Xiufeng and Huang, Zuchao and Nie, Ercong and Ding, Zifeng and Li, Zonggen and Ma, Xiaowen and Bi, Jinhe and Kersting, Kristian and Pan, Jeff Z. and Sch{\"u}tze, Hinrich and Tresp, Volker and Ma, Yunpu},
+  booktitle = {Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (ACL), Main Conference},
+  year      = {2026},
+  pdf       = {https://arxiv.org/pdf/2508.19828},
+  selected  = {true},
+  abstract  = {Large Language Models (LLMs) have demonstrated impressive capabilities across a wide range of NLP tasks, but they remain fundamentally stateless, constrained by limited context windows that hinder long-horizon reasoning. Recent efforts to address this limitation often augment LLMs with an external memory bank, yet most existing pipelines are static and heuristic-driven, lacking a learned mechanism for deciding what to store, update, or retrieve. We present Memory-R1, a reinforcement learning (RL) framework that equips LLMs with the ability to actively manage and utilize external memory through two specialized agents: a Memory Manager that learns structured operations, including ADD, UPDATE, DELETE, and NOOP; and an Answer Agent that pre-selects and reasons over relevant entries. Both agents are fine-tuned with outcome-driven RL (PPO and GRPO), enabling adaptive memory management with minimal supervision. With only 152 training QA pairs, Memory-R1 outperforms strong baselines and generalizes across diverse question types, three benchmarks (LoCoMo, MSC, LongMemEval), and multiple model scales (3B-14B). }
+}
+
+@inproceedings{ma2026selfevolving,
+  abbr      = {ACL 2026 Findings},
+  bibtex_show = {true},
+  title     = {Self-Evolving Multi-Agent Systems via Textual Backpropagation},
+  author    = {Ma, Xiaowen and Ma, Yunpu and Lin, Chenyang and Yan, Sikuan and Bi, Jinhe and Cao, Zixuan and Tian, Yijun and Tresp, Volker and Sch{\"u}tze, Hinrich},
+  booktitle = {Findings of the Association for Computational Linguistics (ACL Findings)},
+  pdf       = {https://arxiv.org/pdf/2506.09046},
+  year      = {2026},
+  selected  = {true},
+  abstract  = {Leveraging multiple Large Language Models(LLMs) has proven effective for addressing complex, high-dimensional tasks, but current approaches often rely on static, manually engineered multi-agent configurations. To overcome these constraints, we present the Agentic Neural Network(ANN), a framework that conceptualizes multi-agent collaboration as a layered neural network architecture. In this design, each agent operates as a node, and each layer forms a cooperative "team" focused on a specific subtask. Agentic Neural Network follows a two-phase optimization strategy: (1) Forward Phase-Drawing inspiration from neural network forward passes, tasks are dynamically decomposed into subtasks, and cooperative agent teams with suitable aggregation methods are constructed layer by layer. (2) Backward Phase-Mirroring backpropagation, we refine both global and local collaboration through iterative feedback, allowing agents to self-evolve their roles, prompts, and coordination. This neuro-symbolic approach enables ANN to create new or specialized agent teams post-training, delivering notable gains in accuracy and adaptability. Across four benchmark datasets, ANN surpasses leading multi-agent baselines under the same configurations, showing consistent performance improvements. Our findings indicate that ANN provides a scalable, data-driven framework for multi-agent systems, combining the collaborative capabilities of LLMs with the efficiency and flexibility of neural network principles. We plan to open-source the entire framework.}
 }
 
 @inproceedings{bi2026prism,
