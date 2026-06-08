@@ -38,6 +38,7 @@
   title     = {Reasoning Compression with Mixed-Policy Distillation},
   author    = {Yang, Han and Wu, Mingyan and He, Bailan and Cao, Zeyu and Yan, Sikuan and Lin, Kevin Qinghong and Ding, Zifeng},
   journal   = {Under review},
+  pdf       = {https://arxiv.org/pdf/2605.08776},
   year      = {2026},
   abstract  = {Reasoning-centric large language models (LLMs) achieve strong performance by generating intermediate reasoning trajectories, but often incur excessive token usage and high inference-time decoding cost. We observe that, when solving the same problems, larger reasoning models can often produce more concise traces, whereas smaller reasoning models tend to generate longer and more redundant trajectories. This is especially problematic in real-world deployment, where memory, latency, and serving-cost constraints often favor smaller models. Our observations suggest that reasoning compression can be transferred from large models to small ones rather than enforced through explicit length constraints. Based on this insight, we propose Mixed-Policy Distillation (MPD), a reasoning compression framework that transfers concise reasoning behavior from a larger-sized teacher to a smaller student by distilling teacher-compressed student trajectories. Unlike on-policy distillation, which aligns the student with teacher distributions over verbose student trajectories, or off-policy distillation, which relies on teacher-generated trajectories and may suffer from distribution mismatch, MPD combines the strengths of both. Given a student-sampled trajectory, the teacher rewrites it into a more concise reasoning trace, and the student is trained via KL-based alignment on the compressed trajectory. This preserves student-policy exploration while injecting teacher-guided compression. Experiments on Qwen3-1.7B show that MPD reduces token usage by up to 27.1% while improving performance across multiple reasoning benchmarks, demonstrating an effective approach to efficient small-model reasoning. }
 }
@@ -45,8 +46,10 @@
 @article{liu2026routingfree,
   title     = {Routing-Free Mixture-of-Experts},
   author    = {Liu, Yilun and Han, Jinru and Yan, Sikuan and Tresp, Volker and Ma, Yunpu},
+  pdf       = {https://arxiv.org/pdf/2604.00801},
   journal   = {Under review},
-  year      = {2026}
+  year      = {2026},
+  abstract  = {Standard Mixture-of-Experts (MoE) models rely on centralized routing mechanisms that introduce rigid inductive biases. We propose Routing-Free MoE which eliminates any hard-coded centralized designs including external routers, Softmax, Top-K and load balancing, instead encapsulating all activation functionalities within individual experts and directly optimized through continuous gradient flow, enabling each expert to determine its activation entirely on its own. We introduce a unified adaptive load-balancing framework to simultaneously optimize both expert-balancing and token-balancing objectives through a configurable interpolation, allowing flexible and customizable resource allocation. Extensive experiments show that Routing-Free MoE can consistently outperform baselines with better scalability and robustness. We analyze its behavior in detail and offer insights that may facilitate future MoE design ad optimization. }
 }
 
 @inproceedings{yan2026memoryr1,
