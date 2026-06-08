@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://yansikuan.github.io/sitemap.xml
