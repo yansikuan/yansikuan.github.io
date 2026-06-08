@@ -1,16 +1,6 @@
 ---
 ---
 
-@article{yan2026pyravid,
-  title     = {PyraVid: Hierarchical Multimodal Memory for Long-Horizon Video Reasoning},
-  author    = {Yan, Sikuan and Dong, Sicheng and Wang, Haotong and Nie, Ercong and Liu, Yilun and Bi, Jinhe and Xu, Yingjie and Schwarzmann, Susanna and Trivisonno, Riccardo and Tresp, Volker and Ma, Yunpu},
-  journal   = {Under review},
-  pdf       = {https://arxiv.org/pdf/2605.17065},
-  year      = {2026},
-  selected  = {true},
-  abstract  = {Memory has become an increasingly important component of agentic systems, as these systems are expected to reason over long-term experience. However, prior work has largely focused on unimodal memory, leaving multimodal memory relatively underexplored despite its central role in real-world applications. Compared with unimodal settings, multimodal memory introduces additional challenges, including heterogeneous input integration, person-centric information alignment, and evidence aggregation across different granularities. We present PyraVid, a hierarchical multimodal memory framework inspired by Event Segmentation Theory from cognitive science. PyraVid organizes long videos into a coarse-to-fine pyramid structure, enabling structured memory access and effective evidence aggregation. It further supports structure-guided memory expansion with pruning, allowing the retrieval of related events with strong causal connectivity but low semantic similarity while reducing noise. Experiments on multiple long-video understanding benchmarks show that PyraVid consistently improves performance across datasets, model scales, and question types, highlighting the effectiveness of hierarchical multimodal memory for long-horizon reasoning. }
-}
-
 @article{yan2026memoryr2,
   title     = {Memory-R2: Fair Credit Assignment for Long-Horizon Memory-Augmented LLM Agents},
   author    = {Yan, Sikuan and Bahloul, Ahmed and Nie, Ercong and Schwarzmann, Susanna and Trivisonno, Riccardo and Tresp, Volker and Ma, Yunpu},
@@ -20,6 +10,16 @@
   code      = {https://github.com/ahmedehabb/Memory-R2},
   selected  = {true},
   abstract  = {Memory-augmented LLM agents enable interactions that extend beyond finite context windows by storing, updating, and reusing information across sessions. However, training such agents with reinforcement learning in multi-session environments is challenging because memory turns the agent's past actions into part of its future environment. Once different rollouts write, update, or delete different memories, they no longer share the same intermediate memory state, making trajectory-level comparisons fundamentally unfair. This violates a key assumption behind group-relative methods such as GRPO, where rollouts are compared as if they were sampled from the same effective environment. Consequently, trajectory-level rewards provide noisy or biased credit signals for long-horizon memory operations. To address this challenge, we introduce Memory-R2, a training framework for long-horizon memory-augmented LLM agents. Its core algorithm, LoGo-GRPO, combines local and global group-relative optimization. The global objective preserves end-to-end learning from long-horizon trajectory-level rewards, while local rerollouts compare different memory-operation outcomes from the same intermediate memory state, yielding fairer group comparisons and more precise supervision for memory construction. Beyond credit assignment, Memory-R2 jointly optimizes memory formation and memory evolution with a shared-parameter co-learning design, where a fact extractor and a memory manager are instantiated from the same LLM backbone through role-specific prompts. To stabilize multi-step RL over long memory horizons, we adopt a progressive curriculum that increases the training horizon from 8 to 16 to 32 sessions. Together, these components provide an effective training paradigm for memory-augmented LLM agents in long-horizon multi-session settings. }
+}
+
+@article{yan2026pyravid,
+  title     = {PyraVid: Hierarchical Multimodal Memory for Long-Horizon Video Reasoning},
+  author    = {Yan, Sikuan and Dong, Sicheng and Wang, Haotong and Nie, Ercong and Liu, Yilun and Bi, Jinhe and Xu, Yingjie and Schwarzmann, Susanna and Trivisonno, Riccardo and Tresp, Volker and Ma, Yunpu},
+  journal   = {Under review},
+  pdf       = {https://arxiv.org/pdf/2605.17065},
+  year      = {2026},
+  selected  = {true},
+  abstract  = {Memory has become an increasingly important component of agentic systems, as these systems are expected to reason over long-term experience. However, prior work has largely focused on unimodal memory, leaving multimodal memory relatively underexplored despite its central role in real-world applications. Compared with unimodal settings, multimodal memory introduces additional challenges, including heterogeneous input integration, person-centric information alignment, and evidence aggregation across different granularities. We present PyraVid, a hierarchical multimodal memory framework inspired by Event Segmentation Theory from cognitive science. PyraVid organizes long videos into a coarse-to-fine pyramid structure, enabling structured memory access and effective evidence aggregation. It further supports structure-guided memory expansion with pruning, allowing the retrieval of related events with strong causal connectivity but low semantic similarity while reducing noise. Experiments on multiple long-video understanding benchmarks show that PyraVid consistently improves performance across datasets, model scales, and question types, highlighting the effectiveness of hierarchical multimodal memory for long-horizon reasoning. }
 }
 
 @inproceedings{bi2026echorl,
