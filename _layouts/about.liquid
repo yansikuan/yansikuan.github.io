@@ -70,11 +70,9 @@ layout: default
       <h2>supervised master students</h2>
       <ul>
         {% for s in page.students %}
-          <li>
-            <strong>{{ s.name }}</strong>{% if s.topic %} — <em>{{ s.topic }}</em>{% endif %}{% if s.position %} ·
-              now
-              {% if s.url %}<a href="{{ s.url }}">{{ s.position }}</a>{% else %}{{ s.position }}{% endif %}
-            {% endif %}
+          <li style="margin-bottom: 0.5rem;">
+            <strong>{{ s.name }}</strong>{% if s.position %} &mdash; now {% if s.url %}<a href="{{ s.url }}">{{ s.position }}</a>{% else %}{{ s.position }}{% endif %}{% endif %}
+            {% if s.topic %}<br><span style="color: var(--global-text-color-light); font-size: 0.9rem;"><em>Thesis:</em> {{ s.topic }}</span>{% endif %}
           </li>
         {% endfor %}
       </ul>

@@ -36,7 +36,7 @@ students:
     topic: Multimodal Memory
     position: ML Scientist at SAP
   - name: Ahmed Bahloul
-    topic: Agentic RL + Memory
+    topic: Multi-step RL + Memory
     position: Incoming PhD candidate
 students_note: >
   I’m grateful for the chance to work with these talented students, and I
