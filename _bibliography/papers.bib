@@ -1,6 +1,37 @@
 ---
 ---
 
+@article{liu2026mendel,
+  title     = {Mendel G{\"o}del Machine: Recursive Self-Improving Coding Agents via Comparative Evolution},
+  author    = {Liu, Changzhi and Liu, Yilun and Yan, Sikuan and Tresp, Volker and Ma, Yunpu},
+  journal   = {arXiv preprint arXiv:2608.07645},
+  year      = {2026},
+  pdf       = {https://arxiv.org/pdf/2608.07645},
+  code      = {https://github.com/RealLcz/MGM},
+  website   = {https://reallcz.github.io/MGM/},
+  abstract  = {Self-improving coding agents that iteratively rewrite their own source code have demonstrated impressive performance on coding tasks. However, existing solutions generally derive self-modification from a single failure trajectory at a time, overlooking rich comparative signals available in the agent's expanding archive of past attempts. According to Mendelian principles of controlled inheritance, we introduce Mendel G{\"o}del Machine (MGM). In addition to the general single-trajectory clonal mutation, MGM includes two new types of self-modification that better utilizes evidences accumulated: the reaction-norm mutation edits an agent based on its trajectories on multiple tasks simultaneously, and the cross-lineage hybridization edits an agent using the trajectory of a reference agent from another lineage on the same task. Under an additive fitness landscape model, we prove theoretically and demonstrate via controlled surrogate simulation that the new strategies facilitate a faster and better convergence over single-trajectory baselines. Experiments on SWE-bench and Polyglot confirm MGM's consistent improvement in performance, efficiency, and generalizability. }
+}
+
+@inproceedings{wang2026memwm,
+  abbr      = {EMNLP 2026},
+  bibtex_show = {true},
+  title     = {MemWM: Memory-Augmented Text-Based World Model},
+  author    = {Wang, Yujun and Zhang, Tao and Bi, Jinhe and Aniri and Ye, Wenxuan and Liu, Boliang and Yan, Sikuan and Wang, Shuning and Zhou, Xuebing and Pirk, S{\"o}ren and Sch{\"u}tze, Hinrich and Ma, Yunpu},
+  booktitle = {Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP), Main Conference},
+  year      = {2026},
+  pdf       = {https://arxiv.org/pdf/2608.07107},
+  abstract  = {World models are increasingly used to support planning in agents by predicting how environment states evolve in response to agent actions. Yet fluent next-state predictions can still omit task-critical facts, corrupt product attributes, or apply incorrect transition rules. To address such systematic prediction errors, we introduce MemWM, a memory-augmented text-based world model. MemWM uses world memory, a curated memory bank of transition rules, state caches, and hard-to-predict facts, to condition next-state imagination. We evaluate factual state preservation with Structured State Fidelity (SSF), which scores predicted states through benchmark-specific facts and fields. Compared with SFT, memory-augmented training improves SSF by up to 206.3%. In the full planning setting, we keep the policy model frozen and provide policy-side world skill: retrieved task-level skills and step-wise corrective guidance for action selection. Across ALFWorld, WebShop, and ScienceWorld, memory-augmented agents improve downstream success over an SFT-trained world-model agent, with up to a 65.4% relative gain. Sensitivity analyses further show that retrieved memory improves task success and efficiency under different memory and action-budget settings. }
+}
+
+@article{wang2026metaskillevolve,
+  title     = {MetaSkill-Evolve: Recursive Self-Improvement of LLM Agents via Two-Timescale Meta-Skill Evolution},
+  author    = {Wang, Zefeng and Yan, Minxi and Bi, Jinhe and Yan, Sikuan and Tresp, Volker and Ma, Yunpu},
+  journal   = {arXiv preprint arXiv:2607.05297},
+  year      = {2026},
+  pdf       = {https://arxiv.org/pdf/2607.05297},
+  abstract  = {Recent LLM agents tackle increasingly long-horizon, open-ended tasks, and external skills, reusable procedural knowledge supplied to the agent, further extend this capability. However, a fixed, hand-authored skill is rarely optimal, and cannot adapt to the diversity of tasks an agent encounters. Self-improving agents address this by rewriting their own skill files from execution traces, yielding meaningful gains on challenging benchmarks. Yet such self-evolution remains non-recursive: it improves only the task skill while the improvement procedure is authored once and held fixed. We introduce MetaSkill-Evolve, a two-timescale framework that makes agentic skill improvement recursive: every branch carries both a task skill and a branch-local meta-skill whose five components parameterise the Analyzer, Retriever, Allocator, Proposer, and Evolver agents of the improvement pipeline. Task skills evolve on a fast loop while the meta-skill evolves on a slower one under the same pipeline applied to itself, with no additional model or objective. With all five pipeline agents sharing a single frozen backbone, MetaSkill-Evolve outperforms no-skill, static-skill, and single-level evolution baselines on three agentic benchmarks (OfficeQA, SealQA, ALFWorld), improving held-out test accuracy over the raw backbone by +23.54, +16.09, and +1.92 points respectively. }
+}
+
 @article{yan2026memoryr2,
   title     = {Memory-R2: Fair Credit Assignment for Long-Horizon Memory-Augmented LLM Agents},
   author    = {Yan, Sikuan and Bahloul, Ahmed and Nie, Ercong and Schwarzmann, Susanna and Trivisonno, Riccardo and Tresp, Volker and Ma, Yunpu},
@@ -12,11 +43,14 @@
   abstract  = {Memory-augmented LLM agents enable interactions that extend beyond finite context windows by storing, updating, and reusing information across sessions. However, training such agents with reinforcement learning in multi-session environments is challenging because memory turns the agent's past actions into part of its future environment. Once different rollouts write, update, or delete different memories, they no longer share the same intermediate memory state, making trajectory-level comparisons fundamentally unfair. This violates a key assumption behind group-relative methods such as GRPO, where rollouts are compared as if they were sampled from the same effective environment. Consequently, trajectory-level rewards provide noisy or biased credit signals for long-horizon memory operations. To address this challenge, we introduce Memory-R2, a training framework for long-horizon memory-augmented LLM agents. Its core algorithm, LoGo-GRPO, combines local and global group-relative optimization. The global objective preserves end-to-end learning from long-horizon trajectory-level rewards, while local rerollouts compare different memory-operation outcomes from the same intermediate memory state, yielding fairer group comparisons and more precise supervision for memory construction. Beyond credit assignment, Memory-R2 jointly optimizes memory formation and memory evolution with a shared-parameter co-learning design, where a fact extractor and a memory manager are instantiated from the same LLM backbone through role-specific prompts. To stabilize multi-step RL over long memory horizons, we adopt a progressive curriculum that increases the training horizon from 8 to 16 to 32 sessions. Together, these components provide an effective training paradigm for memory-augmented LLM agents in long-horizon multi-session settings. }
 }
 
-@article{yan2026pyravid,
+@inproceedings{yan2026pyravid,
+  abbr      = {EMNLP 2026 Main},
+  bibtex_show = {true},
   title     = {PyraVid: Hierarchical Multimodal Memory for Long-Horizon Video Reasoning},
   author    = {Yan, Sikuan and Dong, Sicheng and Wang, Haotong and Nie, Ercong and Liu, Yilun and Bi, Jinhe and Xu, Yingjie and Schwarzmann, Susanna and Trivisonno, Riccardo and Tresp, Volker and Ma, Yunpu},
-  journal   = {Under review},
+  booktitle = {Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP), Main Conference},
   pdf       = {https://arxiv.org/pdf/2605.17065},
+  code      = {https://github.com/yansikuan/Pyravid},
   year      = {2026},
   selected  = {true},
   abstract  = {Memory has become an increasingly important component of agentic systems, as these systems are expected to reason over long-term experience. However, prior work has largely focused on unimodal memory, leaving multimodal memory relatively underexplored despite its central role in real-world applications. Compared with unimodal settings, multimodal memory introduces additional challenges, including heterogeneous input integration, person-centric information alignment, and evidence aggregation across different granularities. We present PyraVid, a hierarchical multimodal memory framework inspired by Event Segmentation Theory from cognitive science. PyraVid organizes long videos into a coarse-to-fine pyramid structure, enabling structured memory access and effective evidence aggregation. It further supports structure-guided memory expansion with pruning, allowing the retrieval of related events with strong causal connectivity but low semantic similarity while reducing noise. Experiments on multiple long-video understanding benchmarks show that PyraVid consistently improves performance across datasets, model scales, and question types, highlighting the effectiveness of hierarchical multimodal memory for long-horizon reasoning. }
@@ -43,11 +77,13 @@
   abstract  = {Reasoning-centric large language models (LLMs) achieve strong performance by generating intermediate reasoning trajectories, but often incur excessive token usage and high inference-time decoding cost. We observe that, when solving the same problems, larger reasoning models can often produce more concise traces, whereas smaller reasoning models tend to generate longer and more redundant trajectories. This is especially problematic in real-world deployment, where memory, latency, and serving-cost constraints often favor smaller models. Our observations suggest that reasoning compression can be transferred from large models to small ones rather than enforced through explicit length constraints. Based on this insight, we propose Mixed-Policy Distillation (MPD), a reasoning compression framework that transfers concise reasoning behavior from a larger-sized teacher to a smaller student by distilling teacher-compressed student trajectories. Unlike on-policy distillation, which aligns the student with teacher distributions over verbose student trajectories, or off-policy distillation, which relies on teacher-generated trajectories and may suffer from distribution mismatch, MPD combines the strengths of both. Given a student-sampled trajectory, the teacher rewrites it into a more concise reasoning trace, and the student is trained via KL-based alignment on the compressed trajectory. This preserves student-policy exploration while injecting teacher-guided compression. Experiments on Qwen3-1.7B show that MPD reduces token usage by up to 27.1% while improving performance across multiple reasoning benchmarks, demonstrating an effective approach to efficient small-model reasoning. }
 }
 
-@article{liu2026routingfree,
+@inproceedings{liu2026routingfree,
+  abbr      = {EMNLP 2026},
+  bibtex_show = {true},
   title     = {Routing-Free Mixture-of-Experts},
   author    = {Liu, Yilun and Han, Jinru and Yan, Sikuan and Tresp, Volker and Ma, Yunpu},
   pdf       = {https://arxiv.org/pdf/2604.00801},
-  journal   = {Under review},
+  booktitle = {Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
   year      = {2026},
   abstract  = {Standard Mixture-of-Experts (MoE) models rely on centralized routing mechanisms that introduce rigid inductive biases. We propose Routing-Free MoE which eliminates any hard-coded centralized designs including external routers, Softmax, Top-K and load balancing, instead encapsulating all activation functionalities within individual experts and directly optimized through continuous gradient flow, enabling each expert to determine its activation entirely on its own. We introduce a unified adaptive load-balancing framework to simultaneously optimize both expert-balancing and token-balancing objectives through a configurable interpolation, allowing flexible and customizable resource allocation. Extensive experiments show that Routing-Free MoE can consistently outperform baselines with better scalability and robustness. We analyze its behavior in detail and offer insights that may facilitate future MoE design ad optimization. }
 }
@@ -77,11 +113,11 @@
 }
 
 @inproceedings{bi2026prism,
-  abbr      = {ACL 2026 Main},
+  abbr      = {EMNLP 2026},
   bibtex_show = {true},
   title     = {PRISM: Self-Pruning Intrinsic Selection Method for Training-Free Multimodal Data Selection},
   author    = {Bi, Jinhe and Aniri and Jin, Zengjie and Wang, Yifan and Yan, Danqi and Huang, Wenke and Ma, Xiaowen and Yan, Sikuan and Hecker, Artur and Ye, Mang and Xiao, Xun and Sch{\"u}tze, Hinrich and Tresp, Volker and Ma, Yunpu},
-  booktitle = {Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (ACL), Main Conference},
+  booktitle = {Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
   pdf       = {https://arxiv.org/pdf/2502.12119},
   year      = {2026},
   abstract  = {Leveraging multiple Large Language Models(LLMs) has proven effective for addressing complex, high-dimensional tasks, but current approaches often rely on static, manually engineered multi-agent configurations. To overcome these constraints, we present the Agentic Neural Network(ANN), a framework that conceptualizes multi-agent collaboration as a layered neural network architecture. In this design, each agent operates as a node, and each layer forms a cooperative "team" focused on a specific subtask. Agentic Neural Network follows a two-phase optimization strategy: (1) Forward Phase-Drawing inspiration from neural network forward passes, tasks are dynamically decomposed into subtasks, and cooperative agent teams with suitable aggregation methods are constructed layer by layer. (2) Backward Phase-Mirroring backpropagation, we refine both global and local collaboration through iterative feedback, allowing agents to self-evolve their roles, prompts, and coordination. This neuro-symbolic approach enables ANN to create new or specialized agent teams post-training, delivering notable gains in accuracy and adaptability. Across four benchmark datasets, ANN surpasses leading multi-agent baselines under the same configurations, showing consistent performance improvements. Our findings indicate that ANN provides a scalable, data-driven framework for multi-agent systems, combining the collaborative capabilities of LLMs with the efficiency and flexibility of neural network principles. We plan to open-source the entire framework. }
