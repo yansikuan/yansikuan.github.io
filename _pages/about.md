@@ -31,13 +31,13 @@ latest_posts:
 students:
   - name: Xiufeng Yang
     topic: Agentic RL + Memory
-    position: PhD candidate at TUM
+    position: PhD candidate at TUM, advised by Prof. Nassir Navab
   - name: Sicheng Dong
     topic: Multimodal Memory
     position: ML Scientist at SAP
   - name: Ahmed Bahloul
     topic: Multi-step RL + Memory
-    position: Incoming PhD candidate
+    position: PhD candidate at TUM, advised by Prof. Daniel Cremers and Dr. Yunpu Ma
 students_note: >
   I’m grateful for the chance to work with these talented students, and I
   always do my best to help them land the strongest possible next position. Feel free
