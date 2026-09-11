@@ -8,6 +8,7 @@ nav_order: 3
 
 ## Talks
 
+- Invited talk to the **JPMorgan Chase Global AI team**, with team members from New York, London, Palo Alto, Madrid, and Paris · _September 10, 2026_
 - **Agent Memory + RL**, invited talk at **NICE 2025** · _2025_ · [[video]](https://www.youtube.com/watch?v=V3A0gY2ALEY)
 - **Agent Memory**, invited talk at **Munich Re**, Munich · _2025_ · [[recap]](https://www.linkedin.com/feed/update/urn:li:ugcPost:7404167195708166144/)
 
