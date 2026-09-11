@@ -8,9 +8,9 @@ nav_order: 3
 
 ## Talks
 
-- Invited talk to the **JPMorgan Chase Global AI team**, with team members from New York, London, Palo Alto, Madrid, and Paris · _September 10, 2026_
-- **Agent Memory + RL**, invited talk at **NICE 2025** · _2025_ · [[video]](https://www.youtube.com/watch?v=V3A0gY2ALEY)
-- **Agent Memory**, invited talk at **Munich Re**, Munich · _2025_ · [[recap]](https://www.linkedin.com/feed/update/urn:li:ugcPost:7404167195708166144/)
+- **From Long-horizon memory agent to multimodal memory agent**, invited talk at **JPMorgan Chase Global AI team**, with team members from New York, London, Palo Alto, Madrid, and Paris · _September 10, 2026_
+- **Reinforcement Learning for Memory Agent**, invited talk at **NICE 2025** · _2025_ · [[video]](https://www.youtube.com/watch?v=V3A0gY2ALEY)
+- **Memory Agent for Industry**, invited talk at **Munich Re**, Munich · _2025_ · [[recap]](https://www.linkedin.com/feed/update/urn:li:ugcPost:7404167195708166144/)
 
 ## Community & Leadership
 
