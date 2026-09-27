@@ -32,10 +32,12 @@
   abstract  = {Recent LLM agents tackle increasingly long-horizon, open-ended tasks, and external skills, reusable procedural knowledge supplied to the agent, further extend this capability. However, a fixed, hand-authored skill is rarely optimal, and cannot adapt to the diversity of tasks an agent encounters. Self-improving agents address this by rewriting their own skill files from execution traces, yielding meaningful gains on challenging benchmarks. Yet such self-evolution remains non-recursive: it improves only the task skill while the improvement procedure is authored once and held fixed. We introduce MetaSkill-Evolve, a two-timescale framework that makes agentic skill improvement recursive: every branch carries both a task skill and a branch-local meta-skill whose five components parameterise the Analyzer, Retriever, Allocator, Proposer, and Evolver agents of the improvement pipeline. Task skills evolve on a fast loop while the meta-skill evolves on a slower one under the same pipeline applied to itself, with no additional model or objective. With all five pipeline agents sharing a single frozen backbone, MetaSkill-Evolve outperforms no-skill, static-skill, and single-level evolution baselines on three agentic benchmarks (OfficeQA, SealQA, ALFWorld), improving held-out test accuracy over the raw backbone by +23.54, +16.09, and +1.92 points respectively. }
 }
 
-@article{yan2026memoryr2,
+@inproceedings{yan2026memoryr2,
+  abbr      = {NeurIPS 2026},
+  bibtex_show = {true},
   title     = {Memory-R2: Fair Credit Assignment for Long-Horizon Memory-Augmented LLM Agents},
   author    = {Yan, Sikuan and Bahloul, Ahmed and Nie, Ercong and Schwarzmann, Susanna and Trivisonno, Riccardo and Tresp, Volker and Ma, Yunpu},
-  journal   = {Under review},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
   year      = {2026},
   pdf       = {https://arxiv.org/pdf/2605.21768},
   code      = {https://github.com/ahmedehabb/Memory-R2},
