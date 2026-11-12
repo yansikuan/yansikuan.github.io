@@ -32,6 +32,9 @@ students:
   - name: Xiufeng Yang
     topic: Agentic RL + Memory
     position: PhD candidate at TUM, advised by Prof. Nassir Navab
+  - name: Zuchao Huang
+    topic: Agentic RL + Memory
+    position: Senior Associate - Economic Consulting at <a href="https://www.thinkbrg.com/">BRG</a>
   - name: Sicheng Dong
     topic: Multimodal Memory
     position: ML Scientist at SAP
